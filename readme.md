@@ -8,7 +8,6 @@ This repository presents an implementation of the **Vector Quantized Variational
 - [🛠️Requirements](#requirements)
 - [📚Dataset](#dataset)
 - [🔍Model Architecture](#model-architecture)
-- [🚀Training](#training)
 - [📊 Results](#results)
 - [💻 Usage](#usage)
 
@@ -43,18 +42,6 @@ The implementation consists of the following main components:
 - **Vector Quantizer:** A layer that maps continuous latent representations to discrete embeddings. It includes a commitment loss to ensure the encoder learns to commit to specific embeddings.
 - **Decoder:** A series of transposed convolutional layers that reconstruct images from the quantized embeddings.
 - **PixelCNN:** A conditional generative model that generates images pixel-by-pixel based on the encoded indices.
-  
----
-
-## 🚀 Training
-
-The model is trained using mean squared error loss to minimize the reconstruction error between the input images and the reconstructed images. The training process also includes a commitment loss from the Vector Quantizer.
-
-To train the model, run the following command:
-
-```bash
-python train.py
-```
 
 ---
 
